@@ -9,26 +9,26 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body class="font-epilogue">
+<body class="font-epilogue overflow-x-hidden">
     <div class="main container mx-auto pt-10">
         <header>
             <nav class="nav-links">
                 <div class="flex justify-between items-center">
                     <a href="#" class="text-white text-xl font-bold"><img src="./img/AudreyOnyike.svg" alt="audrey-onyike" title></a>
-                    <!-- <button id="menu-toggle" class="text-white sm:hidden md:hidden lg:hidden focus:outline-none">
+                    <button id="menu-toggle" class="text-white sm:block md:hidden focus:outline-none">
                         ☰
-                    </button> -->
-                    <ul id="menu" class="flex space-x-6 text-white text-lg">
+                    </button>
+                    <ul id="menu" class="hidden md:flex space-x-6 text-white text-lg">
                         <li><a href="#" class="hover:underline">Projects</a></li>
                         <li><a href="#" class="hover:underline">About</a></li>
                         <li><a href="#" class="hover:underline">My Resume</a></li>
                     </ul>
                 </div>
-                <!-- <ul id="mobile-menu" class="hidden flex-col items-center text-white text-center space-y-4 md:hidden">
+                <ul id="mobile-menu" class="md:hidden flex flex-col items-center text-white text-center space-y-4 mt-4 hidden">
                     <li><a href="#" class="hover:underline">Projects</a></li>
                     <li><a href="#" class="hover:underline">About</a></li>
                     <li><a href="#" class="hover:underline">My Resume</a></li>
-                </ul> -->
+                </ul>
             </nav>
         </header>
         <!-- END OF HEADER -->
@@ -37,8 +37,8 @@
 
 
      <!-- Sidebar -->
-       <div class="flex mt-20">
-    <aside class="w-full md:w-2/5 lg:w-1/3 xl:w-1/4 bg-[#10101A] text-white flex flex-col justify-between p-10">
+       <div class="flex flex-col md:flex-row mt-20 px-4 sm:px-6 lg:px-8">
+    <aside class="w-full md:w-2/5 lg:w-1/3 xl:w-1/4 bg-[#10101A] text-white flex flex-col justify-between p-6 md:p-10">
       <div>
         <div class="flex items-center space-x-2 mb-8">
           <img src="./img/corporate modern transparent background logo - Made with PosterMyWall (2) 1.png" alt="Credence Logo" class="h-7">
@@ -55,7 +55,7 @@
           <img src="./img/Frame 1618868851.png" alt="Figma" class="h-7">
       </div>
     </aside>
-        <div class="flex-1 flex items-center justify-center">
+        <div class="flex-1 flex items-center justify-center p-4 md:p-0">
         <img src="./img/Rectangle 4.png" alt="Dashboard" class="max-w-full h-auto rounded-2xl shadow-lg">
       </div>
     </div>
@@ -90,7 +90,7 @@
           <img 
             src="./img/Group 1000003764.png" 
             alt="Design Process" 
-            class="w-[340px] md:w-[400px] lg:w-[420px] xl:w-[480px] rounded-xl shadow-2xl"
+            class="w-[280px] sm:w-[340px] md:w-[400px] lg:w-[420px] xl:w-[480px] rounded-xl shadow-2xl"
             style="box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);"
           >
         </div>
@@ -240,39 +240,39 @@
           <div class="w-2 h-[420px] bg-[#FF9F43] rounded-full shadow-lg"></div>
         </div>
         <!-- Audrey Yerdua -->
-        <div class="flex-1 flex flex-col items-start">
-          <div class="flex items-center mb-6">
-            <img src="./img/audrey-avatar.png" alt="Audrey Yerdua" class="w-16 h-16 rounded-full bg-[#3B2C3A] mr-4 object-cover">
-            <div>
-              <h3 class="text-lg font-bold text-white">Audrey Yerdua</h3>
-              <span class="text-sm text-gray-400">28/ Female</span>
+          <div class="flex-1 flex flex-col items-start audrey-yerdua-mobile-margin">
+            <div class="flex items-center mb-6">
+              <img src="./img/audrey-avatar.png" alt="Audrey Yerdua" class="w-16 h-16 rounded-full bg-[#3B2C3A] mr-4 object-cover">
+              <div>
+                <h3 class="text-lg font-bold text-white">Audrey Yerdua</h3>
+                <span class="text-sm text-gray-400">28/ Female</span>
+              </div>
+            </div>
+            <div class="mb-8">
+              <div class="flex flex-col gap-1 text-sm text-gray-300">
+                <div><span class="font-semibold text-white">Age:</span> 28 y.o.</div>
+                <div><span class="font-semibold text-white">Name:</span> Audrey Yerdua</div>
+                <div><span class="font-semibold text-white">Occupation:</span> Student/Small Business Owner</div>
+                <div><span class="font-semibold text-white">Location:</span> Abuja,Nigeria</div>
+              </div>
+            </div>
+            <div class="mb-8 mt-6">
+              <h4 class="text-base font-bold text-[#FF9F43] mb-2">Pain Points</h4>
+              <ul class="text-gray-200 text-sm space-y-1 list-none pl-0">
+                <li>Need for easy access to business loans</li>
+                <li>Navigating inconsistent UI of other platforms</li>
+                <li>Tired of several financial platforms having cluttered user interface</li>
+              </ul>
+            </div>
+            <div class="mt-6">
+              <h4 class="text-base font-bold text-[#FF9F43] mb-2">Goals</h4>
+              <ul class="text-gray-200 text-sm space-y-1 list-none pl-0">
+                <li>Easily send and receive funds, especially for rent and monthly bills</li>
+                <li>Growing savings and investments</li>
+                <li>Achieving financial independence</li>
+              </ul>
             </div>
           </div>
-          <div class="mb-8">
-            <div class="flex flex-col gap-1 text-sm text-gray-300">
-              <div><span class="font-semibold text-white">Age:</span> 28 y.o.</div>
-              <div><span class="font-semibold text-white">Name:</span> Audrey Yerdua</div>
-              <div><span class="font-semibold text-white">Occupation:</span> Student/Small Business Owner</div>
-              <div><span class="font-semibold text-white">Location:</span> Abuja,Nigeria</div>
-            </div>
-          </div>
-          <div class="mb-8 mt-6">
-            <h4 class="text-base font-bold text-[#FF9F43] mb-2">Pain Points</h4>
-            <ul class="text-gray-200 text-sm space-y-1 list-none pl-0">
-              <li>Need for easy access to business loans</li>
-              <li>Navigating inconsistent UI of other platforms</li>
-              <li>Tired of several financial platforms having cluttered user interface</li>
-            </ul>
-          </div>
-          <div class="mt-6">
-            <h4 class="text-base font-bold text-[#FF9F43] mb-2">Goals</h4>
-            <ul class="text-gray-200 text-sm space-y-1 list-none pl-0">
-              <li>Easily send and receive funds, especially for rent and monthly bills</li>
-              <li>Growing savings and investments</li>
-              <li>Achieving financial independence</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
     <!-- End User Persona Section -->
@@ -417,20 +417,15 @@
   </div>
 
   <!-- Images Grid -->
-  <div class="flex flex-1 flex-row flex-wrap gap-6 justify-start items-start">
-     <div class="flex gap-6">
+  <div class="image-grid-2">
     <!-- Top Left Image -->
-    <img src="./img/Rectangle 6.png" alt="Fund Transfer" class="w-[350px] rounded-lg shadow-lg">
+    <img src="./img/Rectangle 6.png" alt="Fund Transfer" >
     
     <!-- Top Right Image -->
-    <img src="./img/Rectangle 7.png" alt="Confirm Transaction" class="w-[350px] rounded-lg shadow-lg">
-
-    </div>
-    <!-- Bottom Centered Image (spanning two columns) -->
-    <div class="md:col-span-2 flex justify-center w-full">
-  <img src="./img/Rectangle 8.png" alt="Success" class="rounded-lg shadow-lg" class="rounded-lg shadow-lg mx-auto">
-
-    </div>
+    <img src="./img/Rectangle 7.png" alt="Confirm Transaction" >
+  </div>
+  <div class="flex justify-center mt-6">
+    <img src="./img/Rectangle 8.png" alt="Success" class="max-w-full h-auto mx-auto">
   </div>
 
   <div class="max-w-7xl w-full">
@@ -441,7 +436,7 @@
     </div>
 
     <!-- Image Section -->
-    <div class="flex flex-col lg:flex-row  items-start">
+    <div class="image-grid-2">
       <!-- Image 1 -->
       <img src="./img/Rectangle 6 (1).png" alt="Credit Card Request Page" class="mb-8 rounded-lg shadow-lg">
 
@@ -477,8 +472,8 @@
       <div class="text-right">
         <p class="font-bold text-2xl mb-4">Logo</p>
         <div class="space-y-2">
-          <img src="./img/corporate modern transparent background logo - Made with PosterMyWall (2) 1.png" alt="Credence Logo Light" class="h-10 inline-block">
-          <img src="./img/Frame 37311.png" alt="Credence Logo Dark" class="h-7 p-1 inlzine-block">
+          <img src="./img/corporate modern transparent background logo - Made with PosterMyWall (2) 1.png" alt="Credence Logo Light" class="h-10 inline-block Credence-Logo">
+          <img src="./img/Frame 37311.png" alt="Credence Logo Dark" class="h-7 p-1 inlzine-block Credence-Logo">
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-/*! tailwindcss v4.0.8 | MIT License | https://tailwindcss.com */
+/* Responsive adjustments for smaller screens */
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -91,6 +91,7 @@
       "responsibility tools";
     gap: 2.5rem 3rem;
   }
+
   .design-task { grid-area: task; }
   .design-role { grid-area: role; }
   .design-responsibility { grid-area: responsibility; }
@@ -983,3 +984,73 @@ body {
   syntax: "*";
   inherits: false;
 }
+
+.image-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.image-grid-3 img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.image-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.image-grid-2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden !important;
+  }
+  .main.container {
+    max-width: 85vw !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 80% !important;
+  }
+  p {
+    font-size: 75% !important;
+  }
+  img {
+    max-width: 95% !important;
+    height: auto !important;
+  }
+  .flex, .flex-col, .flex-row {
+    max-width: 95% !important;
+  }
+  /* Move Audrey Yerdua section down on mobile */
+  .audrey-yerdua-mobile-margin {
+    margin-top: 4rem !important;
+  }
+  /* Reduce size of Rectangle 8.png image on mobile */
+  img[alt="Success"] {
+    max-width: 60% !important;
+    height: auto !important;
+  }
+  /* Reduce space on Nunito, Poppins, and Logos columns on mobile */
+  .typeface-logo-row > div {
+    margin-right: -8rem !important;
+    margin-left: 0.5rem !important;
+  }
+  .Credence-Logo {
+    max-width: 20% !important;
+    height: auto !important;
+  }
+}
+  
