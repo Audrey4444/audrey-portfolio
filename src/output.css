@@ -75,7 +75,32 @@
     font-variation-settings: var( --default-font-variation-settings, normal );
     -webkit-tap-highlight-color: transparent;
   }
-  body {
+  .typeface-logo-row {
+  gap: 10rem !important;
+}
+@media (min-width: 768px) {
+  .typeface-logo-row {
+    gap: 10rem !important;
+  }
+
+  .design-process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "task role"
+      "responsibility tools";
+    gap: 2.5rem 3rem;
+  }
+  .design-task { grid-area: task; }
+  .design-role { grid-area: role; }
+  .design-responsibility { grid-area: responsibility; }
+  .design-tools { grid-area: tools; }
+}
+
+.w-20 { width: 5rem !important; }
+.h-28 { height: 7rem !important; }
+.rounded-lg { border-radius: 0.5rem !important; }
+body {
     line-height: inherit;
   }
   hr {
@@ -627,6 +652,8 @@
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
+
+  
   .hover\:cursor-default {
     &:hover {
       @media (hover: hover) {
