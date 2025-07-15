@@ -1,10 +1,11 @@
 /* Responsive adjustments for smaller screens */
 @layer theme, base, components, utilities;
 @layer theme {
-  :root, :host {
-    --font-sans: 'Poppins', san-serif;
-    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-      "Courier New", monospace;
+  :root,
+  :host {
+    --font-sans: "Poppins", san-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
     --color-red-500: oklch(0.637 0.237 25.331);
     --color-amber-500: oklch(0.769 0.188 70.08);
     --color-green-500: oklch(0.723 0.219 149.579);
@@ -52,7 +53,7 @@
     --color-tag-blue: #172135;
     --color-caption-purple: #ab9eb8;
     --color-subtle-purple: #b550f8;
-    --font-epilogue: 'Epilogue', serif;
+    --font-epilogue: "Epilogue", serif;
     --tracking-tightest: -3px;
     --font-source: "Source Sans 3", serif;
     --color-bat-black: #1e1a23;
@@ -60,48 +61,76 @@
   }
 }
 @layer base {
-  *, ::after, ::before, ::backdrop, ::file-selector-button {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0 solid;
   }
-  html, :host {
+  html,
+  :host {
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
     tab-size: 4;
-    font-family: var( --default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" );
+    font-family: var(
+      --default-font-family,
+      ui-sans-serif,
+      system-ui,
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+      "Noto Color Emoji"
+    );
     font-feature-settings: var(--default-font-feature-settings, normal);
-    font-variation-settings: var( --default-font-variation-settings, normal );
+    font-variation-settings: var(--default-font-variation-settings, normal);
     -webkit-tap-highlight-color: transparent;
   }
   .typeface-logo-row {
-  gap: 10rem !important;
-}
-@media (min-width: 768px) {
-  .typeface-logo-row {
     gap: 10rem !important;
   }
+  @media (min-width: 768px) {
+    .typeface-logo-row {
+      gap: 10rem !important;
+    }
 
-  .design-process-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "task role"
-      "responsibility tools";
-    gap: 2.5rem 3rem;
+    .design-process-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "task role"
+        "responsibility tools";
+      gap: 2.5rem 3rem;
+    }
+
+    .design-task {
+      grid-area: task;
+    }
+    .design-role {
+      grid-area: role;
+    }
+    .design-responsibility {
+      grid-area: responsibility;
+    }
+    .design-tools {
+      grid-area: tools;
+    }
   }
 
-  .design-task { grid-area: task; }
-  .design-role { grid-area: role; }
-  .design-responsibility { grid-area: responsibility; }
-  .design-tools { grid-area: tools; }
-}
-
-.w-20 { width: 5rem !important; }
-.h-28 { height: 7rem !important; }
-.rounded-lg { border-radius: 0.5rem !important; }
-body {
+  .w-20 {
+    width: 5rem !important;
+  }
+  .h-28 {
+    height: 7rem !important;
+  }
+  .rounded-lg {
+    border-radius: 0.5rem !important;
+  }
+  body {
     line-height: inherit;
   }
   hr {
@@ -113,7 +142,12 @@ body {
     -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: inherit;
     font-weight: inherit;
   }
@@ -122,19 +156,37 @@ body {
     -webkit-text-decoration: inherit;
     text-decoration: inherit;
   }
-  b, strong {
+  b,
+  strong {
     font-weight: bolder;
   }
-  code, kbd, samp, pre {
-    font-family: var( --default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace );
-    font-feature-settings: var( --default-mono-font-feature-settings, normal );
-    font-variation-settings: var( --default-mono-font-variation-settings, normal );
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: var(
+      --default-mono-font-family,
+      ui-monospace,
+      SFMono-Regular,
+      Menlo,
+      Monaco,
+      Consolas,
+      "Liberation Mono",
+      "Courier New",
+      monospace
+    );
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(
+      --default-mono-font-variation-settings,
+      normal
+    );
     font-size: 1em;
   }
   small {
     font-size: 80%;
   }
-  sub, sup {
+  sub,
+  sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
@@ -160,18 +212,33 @@ body {
   summary {
     display: list-item;
   }
-  ol, ul, menu {
+  ol,
+  ul,
+  menu {
     list-style: none;
   }
-  img, svg, video, canvas, audio, iframe, embed, object {
+  img,
+  svg,
+  video,
+  canvas,
+  audio,
+  iframe,
+  embed,
+  object {
     display: block;
     vertical-align: middle;
   }
-  img, video {
+  img,
+  video {
     max-width: 100%;
     height: auto;
   }
-  button, input, select, optgroup, textarea, ::file-selector-button {
+  button,
+  input,
+  select,
+  optgroup,
+  textarea,
+  ::file-selector-button {
     font: inherit;
     font-feature-settings: inherit;
     font-variation-settings: inherit;
@@ -210,16 +277,27 @@ body {
   ::-webkit-datetime-edit-fields-wrapper {
     padding: 0;
   }
-  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+  ::-webkit-datetime-edit,
+  ::-webkit-datetime-edit-year-field,
+  ::-webkit-datetime-edit-month-field,
+  ::-webkit-datetime-edit-day-field,
+  ::-webkit-datetime-edit-hour-field,
+  ::-webkit-datetime-edit-minute-field,
+  ::-webkit-datetime-edit-second-field,
+  ::-webkit-datetime-edit-millisecond-field,
+  ::-webkit-datetime-edit-meridiem-field {
     padding-block: 0;
   }
   :-moz-ui-invalid {
     box-shadow: none;
   }
-  button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button {
+  button,
+  input:where([type="button"], [type="reset"], [type="submit"]),
+  ::file-selector-button {
     appearance: button;
   }
-  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  ::-webkit-inner-spin-button,
+  ::-webkit-outer-spin-button {
     height: auto;
   }
   [hidden]:where(:not([hidden="until-found"])) {
@@ -372,19 +450,19 @@ body {
     height: auto;
   }
   .w-1\/2 {
-    width: calc(1/2 * 100%);
+    width: calc(1 / 2 * 100%);
   }
   .w-1\/3 {
-    width: calc(1/3 * 100%);
+    width: calc(1 / 3 * 100%);
   }
   .w-2\/3 {
-    width: calc(2/3 * 100%);
+    width: calc(2 / 3 * 100%);
   }
   .w-3\/4 {
-    width: calc(3/4 * 100%);
+    width: calc(3 / 4 * 100%);
   }
   .w-4\/5 {
-    width: calc(4/5 * 100%);
+    width: calc(4 / 5 * 100%);
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
@@ -408,7 +486,8 @@ body {
     flex-grow: 1;
   }
   .transform {
-    transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+    transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z)
+      var(--tw-skew-x) var(--tw-skew-y);
   }
   .list-decimal {
     list-style-type: decimal;
@@ -452,15 +531,23 @@ body {
   .space-y-4 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+      margin-block-start: calc(
+        calc(var(--spacing) * 4) * var(--tw-space-y-reverse)
+      );
+      margin-block-end: calc(
+        calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse))
+      );
     }
   }
   .space-x-6 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * 6) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-x-reverse)));
+      margin-inline-start: calc(
+        calc(var(--spacing) * 6) * var(--tw-space-x-reverse)
+      );
+      margin-inline-end: calc(
+        calc(var(--spacing) * 6) * calc(1 - var(--tw-space-x-reverse))
+      );
     }
   }
   .overflow-hidden {
@@ -651,10 +738,11 @@ body {
     opacity: 40%;
   }
   .filter {
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+      var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
+      var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 
-  
   .hover\:cursor-default {
     &:hover {
       @media (hover: hover) {
@@ -806,12 +894,12 @@ body {
   }
   .md\:w-1\/3 {
     @media (width >= 48rem) {
-      width: calc(1/3 * 100%);
+      width: calc(1 / 3 * 100%);
     }
   }
   .md\:w-1\/4 {
     @media (width >= 48rem) {
-      width: calc(1/4 * 100%);
+      width: calc(1 / 4 * 100%);
     }
   }
   .md\:w-xl {
@@ -996,7 +1084,7 @@ body {
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .image-grid-2 {
   display: grid;
@@ -1009,7 +1097,7 @@ body {
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
@@ -1021,7 +1109,12 @@ body {
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: 80% !important;
   }
   p {
@@ -1031,7 +1124,9 @@ body {
     max-width: 95% !important;
     height: auto !important;
   }
-  .flex, .flex-col, .flex-row {
+  .flex,
+  .flex-col,
+  .flex-row {
     max-width: 95% !important;
   }
   /* Move Audrey Yerdua section down on mobile */
@@ -1053,4 +1148,165 @@ body {
     height: auto !important;
   }
 }
-  
+
+/* Custom styles for image section in mobicare-case-study.html */
+.image-section {
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  max-width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* Color changes for Mobi Care, UX Case Study, and date */
+h1.text-2xl span.text-cyan-500 {
+  background: linear-gradient(90deg, #00c6fb, #005bea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h3.text-2xl.font-bold.text-blue-400 {
+  color: #3fa0dd; /* Change "UX Case Study" color to orange */
+}
+p.text-blue-400.text-md {
+  color: #3fa0dd; /* Change date color to chartreuse */
+}
+
+.image-section img {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  max-width: 32%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.image-section img:nth-child(1) {
+  transform: rotate(-10deg);
+  z-index: 10;
+  margin-right: -10%;
+}
+
+.image-section img:nth-child(2) {
+  z-index: 20;
+  margin-left: -10%;
+  margin-right: -10%;
+}
+
+.image-section img:nth-child(3) {
+  transform: rotate(10deg);
+  z-index: 10;
+  margin-left: -14%;
+}
+.image-section img:nth-child(4) {
+  z-index: 5;
+  margin-left: -13%;
+}
+
+/* Reduce width of Cursor.png image */
+.flex.items-center.gap-2.mt-3.mb-6 img[alt="Cursor Icon"] {
+  max-width: 10rem;
+  width: 10rem;
+  height: auto;
+  margin-left: 0;
+  margin-left: 11rem;
+}
+
+/* Reduce width of Vector (4).png image */
+h3.text-2xl.font-bold.text-blue-400.ml-1.mb-1 img[alt="Vector Icon"] {
+  max-width: 12rem;
+  width: 12rem;
+  height: auto;
+}
+
+/* Responsive adjustments for image section */
+@media (max-width: 1024px) {
+  .image-section img {
+    max-width: 40%;
+    margin: 0 2%;
+  }
+  .image-section img:nth-child(1),
+  .image-section img:nth-child(2),
+  .image-section img:nth-child(3) {
+    transform: none;
+    margin: 0 1%;
+    z-index: auto;
+  }
+}
+
+/* Responsive adjustments for combined section */
+@media (max-width: 768px) {
+  .flex.flex-row.gap-12.items-stretch {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .flex.flex-row.gap-12.items-stretch > div.w-1\/5,
+  .flex.flex-row.gap-12.items-stretch > div.w-4\/5 {
+    width: 100% !important;
+  }
+  .image-section img {
+    max-width: 50% !important;
+    margin: 0 auto !important;
+    display: block !important;
+    transform: none !important;
+  }
+  .png-image,
+  .png-image2 {
+    width: 30% !important;
+    height: auto !important;
+  }
+  .png-image2 {
+    margin-left: 7rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+     margin-right: 1rem !important;
+  }
+  .image-section img {
+    max-width: 50%;
+    transform: none !important;
+    /* Remove auto z-index to allow custom stacking */
+  }
+  .image-section img:nth-child(2) {
+    z-index: 40 !important;
+  }
+  .image-section img:nth-child(3) {
+    z-index: 30 !important;
+  }
+  .image-section img:nth-child(4) {
+    z-index: 10 !important;
+    margin-left: -8rem !important;
+  }
+  .image-section img:nth-child(1),
+  .image-section img:nth-child(2),
+  .image-section img:nth-child(3)
+  .image-section img:nth-child(4) {
+    margin-left: 2rem !important;
+    margin-right: -10rem !important;
+  }
+
+  /* Mobile menu styles */
+  #menu {
+    display: none !important;
+  }
+  #mobile-menu {
+    display: none;
+  }
+  #mobile-menu:not(.hidden) {
+    display: flex !important;
+  }
+  #menu-toggle {
+    display: block;
+  }
+}

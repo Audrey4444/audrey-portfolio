@@ -1,39 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="output.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="output.css" />
     <title>Case Study3</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 </head>
-<body>
+<body class="font-epilogue overflow-x-hidden">
     <div class="main container mx-auto pt-10">
         <header>
-            <nav class="nav-links">
+<nav class="nav-links">
                 <div class="flex justify-between items-center">
                     <a href="#" class="text-white text-xl font-bold"><img src="./img/AudreyOnyike.svg" alt="audrey-onyike" title></a>
-                    <!-- <button id="menu-toggle" class="text-white sm:hidden md:hidden lg:hidden focus:outline-none">
+                    <button id="menu-toggle" class="text-white sm:block md:hidden focus:outline-none">
                         ☰
-                    </button> -->
-                    <ul id="menu" class="flex space-x-6 text-white text-lg">
+                    </button>
+                    <ul id="menu" class="hidden md:flex space-x-6 text-white text-lg">
                         <li><a href="#" class="hover:underline">Projects</a></li>
                         <li><a href="#" class="hover:underline">About</a></li>
                         <li><a href="#" class="hover:underline">My Resume</a></li>
                     </ul>
                 </div>
-                <!-- <ul id="mobile-menu" class="hidden flex-col items-center text-white text-center space-y-4 md:hidden">
+                <ul id="mobile-menu" class="md:hidden flex flex-col items-center text-white text-center space-y-4 mt-4 hidden">
                     <li><a href="#" class="hover:underline">Projects</a></li>
                     <li><a href="#" class="hover:underline">About</a></li>
                     <li><a href="#" class="hover:underline">My Resume</a></li>
-                </ul> -->
+                </ul>
             </nav>
         </header>
-        <!-- END OF HEADER -->
+    </div>
 
-    </div><!-- END OF MAIN -->  
+    <div class="max-w-7xl mx-auto p-6 md:p-12">
+        <!-- Combined section -->
+        <div class="flex flex-row gap-12 items-stretch">
+            <!-- Write-up left side -->
+            <div class="w-1/5 flex flex-col gap-4">
+                <div class="flex items-center gap-2 mt-3 mb-6">
+                    <img
+                      src="./img/Health_logo_healthcare_clinic_Medical_-_Made_with_PosterMyWall-removebg-preview 3.png"
+                      alt="Logo"
+                      class="w-10 h-10"
+                    />
+                </div>
+
+                <h1 class="text-2xl md:text-4xl font-bold mb-8 text-white">
+                    <span class="text-cyan-500">Mobi Care</span>
+                </h1>
+
+                <h2 class="text-xl font-semibold mb-2">Telemedicine App</h2>
+
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    MobiCare allows patients to receive treatment <br />
+                    and consultations remotely, using technology <br />
+                    such as video conferencing, phone calls, and <br />
+                    messaging.
+                </p>
+
+                <h3 class="text-2xl font-bold text-blue-400 ml-1 mb-1">
+                    UX Case Study
+                    <img
+                      src="./img/Vector (4).png"
+                      alt="Vector Icon"
+                      class="w-2 h-auto png-image"
+                    />
+                </h3>
+
+                <div class="flex items-center gap-2 mt-3 mb-6">
+                    <img
+                      src="./img/Cursor.png"
+                      alt="Cursor Icon"
+                      class="w-2 h-auto png-image2"
+                    />
+                </div>
+
+                <p class="text-lg font-semibold mb-1">Duration:</p>
+                <p class="text-blue-400 text-md">12th October - 18th December 2021</p>
+            </div>
+
+            <!-- Images right side -->
+            <div class="w-4/5 justify-center lg:justify-end relative h-full">
+                <div class="image-section">
+                    <img
+                      src="./img/Group 63.png"
+                      alt="Phone Screen 1"
+                      class="w-32 md:w-40 lg:w-48 transform rotate-[-10deg] z-10"
+                    />
+                    <img
+                      src="./img/Group 63 (1).png"
+                      alt="Phone Screen 2"
+                      class="w-36 md:w-44 lg:w-52 z-20"
+                    />
+                    <img
+                      src="./img/Group 34144.png"
+                      alt="Phone Screen 3"
+                      class="w-24 md:w-32 lg:w-40 transform rotate-[10deg] z-10"
+                    />
+                    <img
+                      src="./img/Vector (3).png"
+                      alt="vector image"
+                      class="w-36 md:w-44 lg:w-52 z-5 "
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         document.getElementById('menu-toggle').addEventListener('click', function() {
